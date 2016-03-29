@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>熊猫商城——个人中心</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<div class="container-fluid">
+    <div class="left_main">
+        <!--顶栏-->
+        <div class="top_content">
+            <!--显示所选学校地址-->
+            <div class="location col-md-7 col-md-offset-1">四川大学</div>
+            <!--登录按钮，登录之后显示欢迎，xxx-->
+            <div class="login_register col-md-2"><a href="#">登录/注册</a></div>
+            <!--加关注，关注熊猫微博-->
+            <div class="gz col-md-2"><a href="#">加关注</a></div>
+            <div class="clear"></div>
+        </div>
+        <div class="header row">
+            <div class="logo col-md-2 col-md-offset-1">
+                <!--logo-->
+                <div class="logo_pic"><img src="images/logo.png"></div>
+                <!--广告语-->
+                <div class="ad_logo"><img src="images/logo_behind.png"></div>
+            </div>
+            <div class="search col-md-6">
+                <form class="form-search">
+                    <input class="input-medium search-query col-md-5 col-md-offset-1" type="text" placeholder="请输入商品名称"/>
+                    <button type="submit" class="btn">搜索</button>
+                </form>
+            </div>
+            <div class="contact col-md-3">联系我们：88888888</div>
+        </div>
+
+        <div class="main">
+            <div class="daohang">
+                <!--导航按钮-->
+                <ul class="menu lead col-md-9 col-md-offset-1">
+                    <li>|&nbsp;<a href="#">主页</a></li>
+                    <li>|&nbsp;<a href="#">夜猫店</a></li>
+                    <li>|&nbsp;<a href="#">积分商城</a></li>
+                    <li>|&nbsp;<a href="#">我要签到</a></li>
+                </ul>
+                <!--购物车-->
+                <div class="gouwuche col-md-2 lead"><a>购物车:￥200</a></div>
+            </div>
+            <!--滚动广告栏-->
+            <div class="ad_atuo">
+                <div id="myCarousel" class="carousel slide">
+                    <!-- 轮播（Carousel）指标 -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
+                    <!-- 轮播（Carousel）项目 -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="images/image1.jpg" alt="First slide">
+                        </div>
+                        <div class="item">
+                            <img src="images/image2.jpg" alt="Second slide">
+                        </div>
+                        <div class="item">
+                            <img src="images/image3.jpg" alt="Third slide">
+                        </div>
+                    </div>
+                    <!-- 轮播（Carousel）导航 -->
+                    <a class="carousel-control left" href="#myCarousel"
+                       data-slide="prev">&lsaquo;</a>
+                    <a class="carousel-control right" href="#myCarousel"
+                       data-slide="next">&rsaquo;</a>
+                </div>
+            </div>
+            <!--路径导航-->
+            <div class="route">
+                <p><a href="#">首页</a>><a href="#">个人中心</a>><a href="#">修改头像</a></p>
+            </div>
+            <!--个人中心区域-->
+            <div class="personal_container">
+                <!--左侧导航栏-->
+                <div class="personnal_info_list">
+                    <div class="personnal_info_pic"><img src="images/15.jpg"></div>
+                    <div class="personal_info_name">
+                        <div><span><strong>张三</strong></span></div>
+                        <div><span>当前积分：0</span></div>
+                    </div>
+                </div>
+                <div class="dingdan_l">
+                    <div class="dingdan_l_zx">
+                        <h3><a href="#">个人信息</a></h3>
+                        <ul>
+                            <li><a href="#">编辑个人信息</a></li>
+                            <li><a  href="#l">修改头像</a></li>
+                            <li><a href="#">修改密码</a></li>
+                        </ul>
+                    </div>
+                    <div class="dingdan_l_zc">
+                        <h3><a href="#">我的订单</a></h3>
+                        <ul>
+                            <li><a href="#">查看订单</a></li>
+                        </ul>
+                    </div>
+                    <div class="dingdan_l_kefu">
+                        <h3><a href="#">地址管理</a></h3>
+                        <ul>
+                            <li><a href="#">我的地址</a></li>
+                        </ul>
+                    </div>
+                    <div class="dingdan_l_shezhi">
+                        <h3><a href="#">积分管理</a></h3>
+                        <ul>
+                            <li><a href="#">我的积分</a></li>
+                            <li><a href="#">积分商城</a></li>
+                            <li><a href="#">我要签到</a></li>
+                        </ul>
+                    </div>
+                    <div class="dingdan_l_kefu">
+                        <h3><a href="#">优惠管理</a></h3>
+                        <ul>
+                            <li><a href="#">我的优惠</a></li>
+                        </ul>
+                    </div>
+                    <div class="dingdan_l_shezhi">
+                        <h3><a href="#">我的反馈</a></h3>
+                        <ul>
+                            <li><a href="#">我的建议/意见</a></li>
+                            <li><a href="#">我的投诉</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--个人中心修改区域-->
+            </div>
+            <div class="personal_change_top">
+                <div class="left_hx"></div>
+                <div><span><h3><strong>修改密码</strong></h3></span></div>
+                <div class="left_hx"></div>
+            </div>
+            <!--密码修改-->
+            <div class="pwd_main">
+                <div class="personal_user_list" >
+                    <div><span class="personal_span">输入密码*</span></div>
+                    <div><input type="password"></div>
+                </div>
+                <div class="personal_user_list" >
+                    <div><span class="personal_span">新密码*</span></div>
+                    <div><input type="password"></div>
+                </div>
+                <div class="personal_user_list">
+                    <div><span class="personal_span">确认密码*</span></div>
+                    <div class=""><input type="password"></div>
+                </div>
+                <div class="pwd_btn">
+                    <input type="button" value="确认">
+                    <input type="button" value="取消">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--右侧滚动栏-->
+<!--右侧滚动栏-->
+<div class="right_banner">
+    <div class="right_banner_1"><a style="text-decoration: none"><h3>意见反馈</h3></a></div>
+    <div class="right_banner_2"><a style="text-decoration: none"><h3>APP下载</h3></a></div>
+    <div class="right_banner_3"><a style="text-decoration: none"><h3>微信二维码</h3></a></div>
+    <div class="right_banner_4"><a style="text-decoration: none"><h3>在线客服</h3></a></div>
+    <div class="clear"></div>
+</div>
+<!--右侧滚动栏通知框-->
+<!--意见反馈-->
+<div class="modal" id="admodal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">意见反馈</h4>
+            </div>
+            <div class="modal-body text-center">
+                <span>填写意见、建议或投诉，工作人员将在72小时之内进行回复</span><br/>
+                <textarea placeholder="请在此填写您的意见、建议或者投诉"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-success" data-dismiss="modal">发送</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<!--app下载-->
+<div class="modal" id="downloadmodal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">APP下载</h4>
+            </div>
+            <div class="modal-body text-center">
+                <div>
+                    <span>扫描下载Android客户端</span>
+                    <img src="images/ewm1.png">
+                </div>
+                <div>
+                    <span>&ensp;&ensp;扫描下载IOS客户端&ensp;&ensp;</span>
+                    <img src="images/ewm2.png">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<!--微信二维码-->
+<div class="modal" id="wxmodal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">微信二维码</h4>
+            </div>
+            <div class="modal-body text-center">
+                <span>扫描微信二维码</span>
+                <img src="images/ewm1.png">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<script>
+    $(document).ready(function(){
+        $(".right_banner_1").click(function(){
+            $("#admodal").modal("toggle");
+        });
+        $(".right_banner_2").click(function(){
+            $("#downloadmodal").modal("toggle");
+        });
+        $(".right_banner_3").click(function(){
+            $("#wxmodal").modal("toggle");
+        });
+    });
+</script>
+</body>
+</html>

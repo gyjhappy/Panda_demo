@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>熊猫商城——积分商城</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/awardRotate.js" charset="GB2312" type="text/javascript"></script>
+</head>
+<div class="container-fluid">
+    <div class="left_main">
+    <!--顶栏-->
+    <div class="top_content">
+        <!--显示所选学校地址-->
+        <div class="location col-md-7 col-md-offset-1">四川大学</div>
+        <!--登录按钮，登录之后显示欢迎，xxx-->
+        <div class="login_register col-md-2"><a href="#">登录/注册</a></div>
+        <!--加关注，关注熊猫微博-->
+        <div class="gz col-md-2"><a href="#">加关注</a></div>
+        <div class="clear"></div>
+    </div>
+    <div class="header row">
+        <div class="logo col-md-2 col-md-offset-1">
+            <!--logo-->
+            <div class="logo_pic"><img src="images/logo.png"></div>
+            <!--广告语-->
+            <div class="ad_logo"><img src="images/logo_behind.png"></div>
+        </div>
+        <div class="search col-md-6">
+            <form class="form-search">
+                <input class="input-medium search-query col-md-5 col-md-offset-1" type="text" placeholder="请输入商品名称"/>
+                <button type="submit" class="btn">搜索</button>
+            </form>
+        </div>
+        <div class="contact col-md-3">联系我们：88888888</div>
+    </div>
+
+    <div class="main">
+        <div class="daohang">
+            <!--导航按钮-->
+            <ul class="menu lead col-md-9 col-md-offset-1">
+                <li>|&nbsp;<a href="#">主页</a></li>
+                <li>|&nbsp;<a href="#">夜猫店</a></li>
+                <li>|&nbsp;<a href="#">积分商城</a></li>
+                <li>|&nbsp;<a href="#">我要签到</a></li>
+            </ul>
+            <!--购物车-->
+            <div class="gouwuche col-md-2 lead"><a>购物车:￥200</a></div>
+        </div>
+        <div class="container">
+            <!--滚动广告栏-->
+            <div class="ad_atuo">
+                <div id="myCarousel" class="carousel slide">
+                    <!-- 轮播（Carousel）指标 -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
+                    <!-- 轮播（Carousel）项目 -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="images/image1.jpg" alt="First slide">
+                        </div>
+                        <div class="item">
+                            <img src="images/image2.jpg" alt="Second slide">
+                        </div>
+                        <div class="item">
+                            <img src="images/image3.jpg" alt="Third slide">
+                        </div>
+                    </div>
+                    <!-- 轮播（Carousel）导航 -->
+                    <a class="carousel-control left" href="#myCarousel"
+                       data-slide="prev">&lsaquo;</a>
+                    <a class="carousel-control right" href="#myCarousel"
+                       data-slide="next">&rsaquo;</a>
+                </div>
+            </div>
+            <!--路径导航-->
+            <div class="route">
+                <p><a href="#">首页</a>><a href="#">积分商城</a></p>
+            </div>
+            <!--积分主区-->
+            <div class="score_main">
+                <!--积分转盘-->
+                <div class="score_zp">
+                    <img src="images/1.png" id="shan-img" style="display:none;" />
+                    <img src="images/2.png" id="sorry-img" style="display:none;" />
+                    <div class="banner">
+                        <div class="turnplate" style="background-image:url(images/turnplate-bg.png);background-size:100% 100%;">
+                            <canvas class="item2" id="wheelcanvas" width="422px" height="422px"></canvas>
+                            <img class="pointer" src="images/turnplate-pointer.png"/>
+                        </div>
+                    </div>
+                </div>
+                <!--滚动显示中奖信息-->
+                <div class="score_user">
+                    <div class="list_score_user">
+                        <div class="slide-title">
+                            <span>中奖人</span>
+                            <span>奖品</span>
+                        <span>中奖时间</span>
+                        </div>
+                        <div class="slide-container">
+                            <ul class="slide-list js-slide-list">
+                                <li class="odd"><span>item1</span><span>item1</span><span>item1</span></li>
+                                <li class="even"><span>item2</span><span>item2</span><span>item2</span></li>
+                                <li class="odd"><span>item3</span><span>item3</span><span>item3</span></li>
+                                <li class="even"><span>item4</span><span>item4</span><span>item4</span></li>
+                                <li class="even"><span>item5</span><span>item5</span><span>item5</span></li>
+                                <li class="odd"><span>item6</span><span>item6</span><span>item6</span></li>
+                                <li class="even"><span>item7</span><span>item7</span><span>item7</span></li>
+                                <li class="even"><span>item5</span><span>item5</span><span>item5</span></li>
+                                <li class="odd"><span>item6</span><span>item6</span><span>item6</span></li>
+                                <li class="even"><span>item7</span><span>item7</span><span>item7</span></li>
+                                <li class="even"><span>item7</span><span>item7</span><span>item7</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <!--显示可以用积分兑换的小礼物-->
+                <div class="f_goods_list">
+                    <ul class="clearfix">
+                        <li>
+                            <div class="img_box">
+                                <i></i>
+                                <img width="150" height="85" src="http://misc.jifen.xunlei.com/files/goodimgs/b/201603141413412006.jpg" alt="【买立减】20元铁观音茶叶直减券">
+                            </div>
+                            <dl class="f_goods_msg">
+                                <dt>积分：</dt>
+                                <dd><p class="txt_price"><em>2000积分</em></p></dd>
+                            </dl>
+                            <a href="http://jifen.xunlei.com/index/goodinfo/id/1147" target="_blank" class="f_goods_link"></a>
+                        </li>
+
+                        <li>
+                            <div class="img_box">
+                                <i></i>
+                                <img width="150" height="85" src="http://misc.jifen.xunlei.com/files/goodimgs/b/201603081340223333.jpg" alt="【买立减】意大利红酒100元优惠券（原瓶原装）">
+                            </div>
+                            <dl class="f_goods_msg">
+                                <dt>积分：</dt>
+                                <dd><p class="txt_price"><em>1000积分</em></p></dd>
+                            </dl>
+                            <a href="http://jifen.xunlei.com/index/goodinfo/id/1146" target="_blank" class="f_goods_link"></a>
+                        </li>
+
+                        <li>
+                            <div class="img_box">
+                                <i></i>
+                                <img width="150" height="85" src="http://misc.jifen.xunlei.com/files/goodimgs/b/201603151502305397.jpg" alt="【买立减】木薯肌肤检测仪30元优惠券">
+                            </div>
+
+                            <dl class="f_goods_msg">
+                                <dt>积分：</dt>
+                                <dd><p class="txt_price"><em>3000积分</em></p></dd>
+                            </dl>
+                            <a href="http://jifen.xunlei.com/index/goodinfo/id/1148" target="_blank" class="f_goods_link"></a>
+                        </li>
+
+                        <li>
+                            <div class="img_box">
+                                <i></i>
+                                <img width="150" height="85" src="http://misc.jifen.xunlei.com/files/goodimgs/b/201603151440008638.jpg" alt="【买立减】百搭拼接夹克29元包邮">
+                            </div>
+                            <dl class="f_goods_msg">
+                                <dt>积分：</dt>
+                                <dd><p class="txt_price"><em>2000积分</em></p></dd>
+                            </dl>
+                            <a href="http://jifen.xunlei.com/index/goodinfo/id/1143" target="_blank" class="f_goods_link"></a>
+                        </li>
+                        <li>
+                            <div class="img_box">
+                                <i></i>
+                                <img width="150" height="85" src="http://misc.jifen.xunlei.com/files/goodimgs/b/201603101450438891.jpg" alt="【信服到家】进口TPU手机套">
+                            </div>
+                            <dl class="f_goods_msg">
+                                <dt>积分：</dt>
+                                <dd><p class="txt_price"><em>1000积分</em></p></dd>
+                            </dl>
+                            <a href="http://jifen.xunlei.com/index/goodinfo/id/1004" target="_blank" class="f_goods_link"></a>
+                        </li>
+                        <li>
+                            <div class="img_box">
+                                <i></i>
+                                <img width="150" height="85" src="http://misc.jifen.xunlei.com/files/goodimgs/b/201603071608394605.jpg" alt="[付邮兑换]全自动搅拌咖啡杯">
+                            </div>
+                            <dl class="f_goods_msg">
+                                <dt>积分：</dt>
+                                <dd><p class="txt_price"><em>2000积分</em></p></dd>
+                            </dl>
+                            <a href="http://jifen.xunlei.com/index/goodinfo/id/1140" target="_blank" class="f_goods_link"></a>
+                        </li>
+
+                        <li>
+                            <div class="img_box">
+                                <i></i>
+                                <img width="150" height="85" src="http://misc.jifen.xunlei.com/files/goodimgs/b/201603071614321230.jpg" alt="[付邮兑换】智能快充聚合物移动电源">
+                            </div>
+                            <dl class="f_goods_msg">
+                                <dt>积分：</dt>
+                                <dd><p class="txt_price"><em>5000积分</em></p></dd>
+                            </dl>
+                            <a href="http://jifen.xunlei.com/index/goodinfo/id/1141" target="_blank" class="f_goods_link"></a>
+                        </li>
+                        <li>
+                            <div class="img_box">
+                                <i></i>
+                                <img width="150" height="85" src="http://misc.jifen.xunlei.com/files/goodimgs/b/201603071626541093.jpg" alt="【买立减】木薯洁面仪100元优惠券">
+                            </div>
+                            <dl class="f_goods_msg">
+                                <dt>积分：</dt>
+                                <dd><p class="txt_price"><em>1000积分</em></p></dd>
+                            </dl>
+                            <a href="http://jifen.xunlei.com/index/goodinfo/id/1142" target="_blank" class="f_goods_link"></a>
+                        </li>
+                        <li>
+                            <div class="img_box">
+                                <i></i>
+                                <img width="150" height="85" src="http://misc.jifen.xunlei.com/files/goodimgs/b/201512221444392204.png" alt="【友金所】166元现金红包">
+                            </div>
+                            <dl class="f_goods_msg">
+                                <dt>积分：</dt>
+                                <dd><p class="txt_price"><em>1000积分</em></p></dd>
+                            </dl>
+                            <a href="http://jifen.xunlei.com/index/goodinfo/id/1101" target="_blank" class="f_goods_link"></a>
+                        </li>
+                        <li>
+                            <div class="img_box">
+                                <i></i>
+                                <img width="150" height="85" src="http://misc.jifen.xunlei.com/files/goodimgs/b/201603081334484765.jpg" alt="【付邮兑换】天然珍珠手链">
+                            </div>
+                            <dl class="f_goods_msg">
+                                <dt>积分：</dt>
+                                <dd><p class="txt_price"><em>2000积分</em></p></dd>
+                            </dl>
+                            <a href="http://jifen.xunlei.com/index/goodinfo/id/1145" target="_blank" class="f_goods_link"></a>
+                        </li>
+                        <li>
+                            <div class="img_box">
+                                <i></i>
+                                <img width="150" height="85" src="http://misc.jifen.xunlei.com/files/goodimgs/b/201603081321575374.jpg" alt="【付邮兑换】小鹿圣诞树银耳钉">
+                            </div>
+                            <dl class="f_goods_msg">
+                                <dt>积分：</dt>
+                                <dd><p class="txt_price"><em>1400积分</em></p></dd>
+                            </dl>
+                            <a href="http://jifen.xunlei.com/index/goodinfo/id/1144" target="_blank" class="f_goods_link"></a>
+                        </li>
+                        <li>
+                            <div class="img_box">
+                                <i></i>
+                                <img width="150" height="85" src="http://misc.jifen.xunlei.com/files/goodimgs/b/201601211510352579.jpg" alt="【付邮兑换】纯银雏菊耳钉">
+                            </div>
+                            <dl class="f_goods_msg">
+                                <dt>积分：</dt>
+                                <dd><p class="txt_price"><em>20积分</em></p></dd>
+                            </dl>
+                            <a href="http://jifen.xunlei.com/index/goodinfo/id/1130" target="_blank" class="f_goods_link"></a>
+                        </li>
+                        <li>
+                            <div class="img_box">
+                                <i></i>
+                                <img width="150" height="85" src="http://misc.jifen.xunlei.com/files/goodimgs/b/201603071551253282.jpg" alt="[付邮兑换]迷你卡通电子称">
+                            </div>
+                            <dl class="f_goods_msg">
+                                <dt>积分：</dt>
+                                <dd><p class="txt_price"><em>5000积分</em></p></dd>
+                            </dl>
+                            <a href="http://jifen.xunlei.com/index/goodinfo/id/1139" target="_blank" class="f_goods_link"></a>
+                        </li>
+                        <li>
+                            <div class="img_box">
+                                <i></i>
+                                <img width="150" height="85" src="http://misc.jifen.xunlei.com/files/goodimgs/b/201603071555493947.jpg" alt="[付邮兑换】多功能三合一充电数据线">
+                            </div>
+                            <dl class="f_goods_msg">
+                                <dt>积分：</dt>
+                                <dd><p class="txt_price"><em>2000积分</em></p></dd>
+                            </dl>
+                            <a href="http://jifen.xunlei.com/index/goodinfo/id/1138" target="_blank" class="f_goods_link"></a>
+                        </li>
+                        <li>
+                            <div class="img_box">
+                                <i></i>
+                                <img width="150" height="85" src="http://misc.jifen.xunlei.com/files/goodimgs/b/201602231415215340.jpg" alt="【付邮兑换】猫眼石藏银手链">
+                            </div>
+                            <dl class="f_goods_msg">
+                                <dt>积分：</dt>
+                                <dd><p class="txt_price"><em>50积分</em></p></dd>
+                            </dl>
+                            <a href="http://jifen.xunlei.com/index/goodinfo/id/1137" target="_blank" class="f_goods_link"></a>
+                        </li>
+                        <li>
+                            <div class="img_box">
+                                <i></i>
+                                <img width="150" height="85" src="http://misc.jifen.xunlei.com/files/goodimgs/b/201602181435356961.jpg" alt="双层立领防风夹克 39元包邮">
+                            </div>
+                            <dl class="f_goods_msg">
+                                <dt>积分：</dt>
+                                <dd><p class="txt_price"><em>40积分</em></p></dd>
+                            </dl>
+                            <a href="http://jifen.xunlei.com/index/goodinfo/id/1136" target="_blank" class="f_goods_link"></a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+    </div>
+</div>
+    </div>
+    <!--右侧滚动栏-->
+    <div class="right_banner">
+        <div class="right_banner_1"><a style="text-decoration: none"><h3>意见反馈</h3></a></div>
+        <div class="right_banner_2"><a style="text-decoration: none"><h3>APP下载</h3></a></div>
+        <div class="right_banner_3"><a style="text-decoration: none"><h3>微信二维码</h3></a></div>
+        <div class="right_banner_4"><a style="text-decoration: none"><h3>在线客服</h3></a></div>
+        <div class="clear"></div>
+    </div>
+    <!--右侧滚动栏通知框-->
+    <!--意见反馈-->
+    <div class="modal" id="admodal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">意见反馈</h4>
+                </div>
+                <div class="modal-body text-center">
+                    <span>填写意见、建议或投诉，工作人员将在72小时之内进行回复</span><br/>
+                    <textarea placeholder="请在此填写您的意见、建议或者投诉"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-success" data-dismiss="modal">发送</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
+    <!--app下载-->
+    <div class="modal" id="downloadmodal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">APP下载</h4>
+                </div>
+                <div class="modal-body text-center">
+                    <div>
+                        <span>扫描下载Android客户端</span>
+                        <img src="images/ewm1.png">
+                    </div>
+                    <div>
+                        <span>&ensp;&ensp;扫描下载IOS客户端&ensp;&ensp;</span>
+                        <img src="images/ewm2.png">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
+    <!--微信二维码-->
+    <div class="modal" id="wxmodal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">微信二维码</h4>
+                </div>
+                <div class="modal-body text-center">
+                    <span>扫描微信二维码</span>
+                    <img src="images/ewm1.png">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
+    <script>
+        $(document).ready(function(){
+            $(".right_banner_1").click(function(){
+                $("#admodal").modal("toggle");
+            });
+            $(".right_banner_2").click(function(){
+                $("#downloadmodal").modal("toggle");
+            });
+            $(".right_banner_3").click(function(){
+                $("#wxmodal").modal("toggle");
+            });
+        });
+    </script>
+</div>
+</body>
+</html>
